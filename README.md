@@ -14,13 +14,37 @@ A simple command line interface to manage all your tasks
 Type 'p' to print all available options.
 Type 'q' to quit the program
 
-# Setup
-- ensure that g++ is installed on your Mac
+# Getting started
 
-## On Mac
+## Prerequisites
+Ensure that g++ is installed on your Mac
+
+## Setup
+
+### On Mac
 1. Go to terminal
 2. cd to the folder
 3. To compile, execute the following
-"g++ main.cpp TaskMgr.cpp -o main"
+```
+g++ main.cpp TaskMgr.cpp -o main
+```
 4. To run (Tested on mac)
-"./main"
+```
+./main
+```
+
+## Built With
+
+## Contributing
+
+## Versioning
+
+## Authors
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+
+## Acknowledgments
+
+
