@@ -24,11 +24,13 @@ void createTask();
 // aim: ask for task name, check that validity of input
 // @pre: no
 // @post: if task name is valid, a task is added to the list
+// note: duplicated task is not check yet
 
 void editTask();
 // aim: edit content of pre-existing task
 // @pre: there are tasks in the list
 // @post: task is edited or error is signaled
+// note: duplicated task is not check yet
 
 void deleteTask();
 // aim: remove task from its list
