@@ -12,7 +12,9 @@ A simple command line interface to manage all your tasks
    Print all available tasks
    
 Type 'p' to print all available options.
-Type 'q' to quit the program
+Type 'q' to quit the program.
+
+@todo: Check for duplicated task name
 
 # Getting started
 
