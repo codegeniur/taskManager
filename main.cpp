@@ -43,23 +43,25 @@ int main(void)
 				}
 				break;
 				case 'q':
+				case 'Q':
 				{
 					cout << "Exit Task Manager\n\n";
 				}
 				break;
-				case 'p':
+				case 'm':
+				case 'M':
 				{
 					printMenu();
 				}
 				break;
 				default:
 				{
-					cout << "Invalid input!\n\n";
+					cout << "Invalid option!\n\n";
 				}
 				break;
 			}
 		}
-	} while( option != 'q');
+	} while( option != 'q' && option != 'Q');
 
 	myTask.saveTask();
 	return 0;
@@ -69,7 +71,7 @@ bool processMenu()
 {
 	bool validOption = true;
 
-	cout << "\nPlease key in option: ";
+	cout << "\nOption: ";
 	cin >> option;
 
 	if(cin.fail() )
@@ -82,7 +84,7 @@ bool processMenu()
 	else if( cin.peek() != '\n' )
 	{
 		// Program shall recognizes only single character option
-		cout << "Please key in single character option!\n";
+		cout << "Key in single character option!\n";
 		validOption = false;
 	}
 	cin.ignore(999,'\n');
@@ -97,7 +99,7 @@ void printMenu()
 	cout << "2: Edit Task\n";
 	cout << "3: Delete Task\n";
 	cout << "4: List Task\n";
-	cout << "p: Menu\n";
+	cout << "m: Menu\n";
 	cout << "q: Quit\n";	
 	cout << "*****************************\n";
 }

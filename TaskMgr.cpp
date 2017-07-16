@@ -14,7 +14,6 @@ void TaskMgr::createTask()
 	if( task.empty() )
 	{
 		cout << "\nNo task name!\n";
-		cout << "\nEmpty string!\n";
 	}
 	else
 	{
@@ -30,7 +29,6 @@ void TaskMgr::editTask()
 	{
 		int taskIndex;
 		cout << "Task number to edit: ";
-		cout << "Task to be edited: ";
 		cin >> taskIndex;
 		cin.ignore(999,'\n');
 
@@ -40,7 +38,6 @@ void TaskMgr::editTask()
 			string dummy;
 			cin >> dummy;
 			cout << "Only task numbers are accepted!\n";
-			cout << "Please key in integers!\n";
 		}
 		else if( taskIndex <= _taskList.size() && taskIndex > 0 )
 		{	// valid task index
@@ -54,7 +51,6 @@ void TaskMgr::editTask()
 			else
 			{
 				cout << "No task name!\n";
-				cout << "Empty string, please key in something!\n";
 			}
 		}
 		else
@@ -70,7 +66,6 @@ void TaskMgr::deleteTask()
 	{
 		int taskIndex;
 		cout << "Task number to delete: ";
-		cout << "Key in task to be deleted: ";
 		cin >> taskIndex;
 		cin.ignore(999,'\n');
 
@@ -80,17 +75,14 @@ void TaskMgr::deleteTask()
 			string dummy;
 			cin >> dummy;
 			cout << "Only task number accepted!\n";
-			cout << "Cin failure!\n";
 		}
 		else if( taskIndex <= _taskList.size() && taskIndex > 0 )
 		{
 			char yn;
 			cout << "Proceed deleting (y/n)? \n";
-			cout << "Proceed deleting (y/n)? [y]\n";
 			cin >> yn;
 			cin.ignore(999,'\n');
 			if(yn == 'y' )
-			if(yn == 'y' || yn == '\n')
 			{
 				cout << "Task '" << _taskList[taskIndex-1] << "' has been deleted\n";
 				_taskList.erase(_taskList.begin()+(taskIndex-1));
@@ -132,7 +124,6 @@ void TaskMgr::saveTask()
 	else
 	{
 		cout << "File saved as " << _taskTxt << "\n";
-		cout << "File saved\n";
 		for(int i=0; i<_taskList.size(); i++ )
 		{
 			myfile << i+1 << ". " << _taskList[i] << "\n";
@@ -146,7 +137,6 @@ string TaskMgr::getTaskName()
 	char input[50];
 	string ret;
 	cout << "Task name: ";
-	cout << "Key in new task name: ";
 	cin.getline(input,sizeof(input));
 	ret = input;
 	return ret;
